@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     @ViewChild(MatSort)
     sort: MatSort;
 
-    constructor(private _http: HttpClient) {}
+    constructor(private http: HttpClient) {}
 
     ngOnInit(): void {
         this.dataSource.sort = this.sort;
@@ -29,13 +29,13 @@ export class AppComponent implements OnInit {
     }
 }
 
-export interface PeriodicElement {
+export interface CompanyElement {
     nom: string;
     date: string;
     ged?: boolean;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: CompanyElement[] = [
     // tslint:disable-next-line:quotemark
     { nom: "MacDonald's", date: '02/01/2005', ged: true },
     { nom: 'KFC', date: '10/10/2018', ged: false },
